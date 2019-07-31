@@ -1,9 +1,14 @@
 //Services
 var JOKE_SERVICE = {
     get: function(){
-            return $.ajax({
+          return   $.ajax({
                 type: 'get',
-                url: JOKES_API
+                url: JOKES_API,
+                async: false,
+                // success: function(data){
+                //      someOtherFunc(data.leader);
+                //  }
+              
             });
         },
     answer: function(){
@@ -13,7 +18,3 @@ var JOKE_SERVICE = {
             });
         }
 }
-
-
-
-
